@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   let y = height - 28;
 
   // Header
-  page.drawText("A&Y OUTLET", { x: left, y, size: 18, font: bold, color: gold });
+  page.drawText("A&P OUTLET", { x: left, y, size: 18, font: bold, color: gold });
   y -= 18;
   page.drawText("Fashion Store", { x: left, y, size: 10, font, color: gray });
   y -= 14;
@@ -100,10 +100,10 @@ export async function POST(req: NextRequest) {
 
   // Build links
   const phone = customerPhone?.replace(/\D/g, "");
-  const waMsg = `Hi${sale.customer_name ? " " + sale.customer_name : ""}! 🛍️ Thank you for shopping at A&Y Outlet.\n\nInvoice: ${sale.invoice_number}\nTotal: ${fmt(sale.total)} (${sale.payment_method})\n\nDownload receipt: ${pdfUrl}`;
+  const waMsg = `Hi${sale.customer_name ? " " + sale.customer_name : ""}! 🛍️ Thank you for shopping at A&P Outlet.\n\nInvoice: ${sale.invoice_number}\nTotal: ${fmt(sale.total)} (${sale.payment_method})\n\nDownload receipt: ${pdfUrl}`;
   const whatsappUrl = phone ? `https://wa.me/${phone}?text=${encodeURIComponent(waMsg)}` : null;
 
-  const emailSubject = `Your receipt from A&Y Outlet — ${sale.invoice_number}`;
+  const emailSubject = `Your receipt from A&P Outlet — ${sale.invoice_number}`;
   const emailBody = `Dear ${sale.customer_name ?? "Customer"},\n\nThank you for shopping with us!\n\nInvoice: ${sale.invoice_number}\nTotal: ${fmt(sale.total)}\n\nReceipt: ${pdfUrl}\n\nA&Y Outlet Fashion Store`;
   const gmailUrl = customerEmail ? `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(customerEmail)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}` : null;
 
