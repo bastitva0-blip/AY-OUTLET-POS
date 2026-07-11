@@ -3,7 +3,7 @@ import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 import { supabase } from "@/lib/supabase";
 
 function fmt(n: number) {
-  return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 0 }).format(n);
+  return "Rs. " + new Intl.NumberFormat("en-IN", { minimumFractionDigits: 0 }).format(Math.round(n));
 }
 
 export async function POST(req: NextRequest) {
