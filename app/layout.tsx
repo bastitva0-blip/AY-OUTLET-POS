@@ -3,8 +3,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "A&Y Outlet POS",
-  description: "Point of Sale — A&Y Fashion Store",
+  title: "A&P Outlet POS",
+  description: "Point of Sale — A&P Fashion Store",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
