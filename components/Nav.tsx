@@ -17,7 +17,7 @@ export default function Nav() {
       padding: "0 24px", position: "sticky", top: 0, zIndex: 100,
     }}>
       <div style={{ marginRight: 32, padding: "14px 0" }}>
-        <div style={{ fontWeight: 800, fontSize: 17, color: "#d4a853", letterSpacing: "0.05em" }}>A&Y OUTLET</div>
+        <div style={{ fontWeight: 800, fontSize: 17, color: "#d4a853", letterSpacing: "0.05em" }}>A&P OUTLET</div>
         <div style={{ fontSize: 10, color: "#5a6080", letterSpacing: "0.1em" }}>FASHION STORE POS</div>
       </div>
       {links.map(l => (
