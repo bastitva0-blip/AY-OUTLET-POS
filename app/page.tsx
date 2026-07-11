@@ -49,7 +49,7 @@ export default function Dashboard() {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24 }}>
         <div>
           <h1 style={{ fontSize: 24, fontWeight: 800, color: "#d4a853" }}>Dashboard</h1>
-          <p style={{ color: "#5a6080", fontSize: 13, marginTop: 2 }}>A&Y Outlet — Fashion Store</p>
+          <p style={{ color: "#5a6080", fontSize: 13, marginTop: 2 }}>A&P Outlet — Fashion Store</p>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
           {(["today", "week", "month"] as const).map(r => (
